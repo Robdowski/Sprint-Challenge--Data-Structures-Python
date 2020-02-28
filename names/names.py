@@ -13,10 +13,10 @@ f.close()
 duplicates = []  # Return the list of duplicates in this data structure
 
 # Replace the nested for loops below with your improvements
-for name_1 in names_1:
-    for name_2 in names_2:
-        if name_1 == name_2:
-            duplicates.append(name_1)
+## NOT SURE WHERE TO PUT THIS BUT THE ORIGINAL RUNTIME WAS O(n * m) WHERE N IS THE AMOUNT OF NAMES IN NAMES1 AND M IS THE AMOUNT IN NAMES 2
+dupe_names = set(names_1).intersection(names_2)
+for name in dupe_names:
+    duplicates.append(name)
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
